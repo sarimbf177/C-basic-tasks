@@ -1,0 +1,63 @@
+#include<iostream>
+
+#include<conio.h>
+
+
+
+using namespace std;
+
+
+
+bool multiple(int x ,  int y)
+
+ {
+
+	if (y%x==0)
+
+	  {
+	
+		cout << y << " is multiple of " << x;
+    
+		return true;
+
+	  }
+
+
+	else
+ 
+	  {
+	
+		cout << y << " is not multiple of " << x;
+    
+		return false;
+
+	  }
+
+
+ }
+
+int main()
+
+ {
+    
+	int num_1, num_2;
+
+
+	cout << "Enter First Number: ";
+
+	cin >> num_1;
+
+	cout << "Enter Second Number: ";
+
+	cin >> num_2;
+
+
+	multiple (num_1,num_2);
+
+
+	getch();
+
+
+	return 0;
+
+ }
