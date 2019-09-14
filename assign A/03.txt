@@ -1,0 +1,40 @@
+	//QUESTION
+/*  Write a function that displays at the left margin of the screen a solid square of asterisks whose side is specified in integer parameter side. For example, if side 
+is 4, the function displays: 
+
+ * * * * 
+ * * * * 
+ * * * *
+ * * * *    */
+
+
+
+	//PROGRAM
+
+#include <iostream>
+#include<conio.h>
+
+using  namespace std;
+
+void square (int side)
+{
+
+	for(int m=0; m < side; m++)
+	{
+		for(int n=0; n < side; n++)
+		{
+			cout<< " * ";
+		}
+		cout<< endl;
+	}
+}
+int main()
+{
+	int side;
+	cout<< "Enter the sides of Square: ";
+	cin>> side;
+	square(side);
+
+	getch();
+	return 0;
+}
