@@ -1,0 +1,78 @@
+	//QUESTION
+/* Implement the following integer functions:
+1) Function celsius returns the Celsius equivalent of a Fahrenheit temperature.
+2) Function fahrenheit returns the Fahrenheit equivalent of a Celsius temperature
+3) Use these functions to write a program that prints charts showing the Fahrenheit equivalents of all Celsius temperatures from 0 to 100 degrees, and the Celsius 
+   equivalents of all Fahrenheit temperatures from 32 to 212 degrees. Print the outputs in a neat tabular format that minimizes the number of lines of output while
+   remaining readable.*/
+
+
+
+
+	//PROGRAM
+
+#include <iostream>
+#include <conio.h>
+#include <iomanip>
+
+using namespace std;
+
+void fahrenheit(void)
+{
+	float fahren;
+	float centi=0;
+	cout<<"-----------------------------------------"<<endl;
+	cout<<"|     CELSIUS TO FAHRENHEIT CHART       |" << endl;
+	cout<<"-----------------------------------------"<<endl;
+	cout<< "|" << setw(5) << "CELSIUS " << setw(5) << "|"  <<" FAHRENHEIT"<< setw(10) << "|" <<endl;
+	
+	for(int i=0;i<=100;i++)
+	{
+		fahren = (centi *9/5) + 32;
+		cout<<"|"<<setw(5)<<i<<setw(8)<<"|"<<setw(10)<<fahren<<setw(10)<<"|"<<endl;
+		cout<<"_________________________________"<<endl;
+		centi++;
+	}
+}
+void celsius(void)
+{
+	int centi;
+	int fahren=32;
+	cout<<"-----------------------------------------"<<endl;
+	cout<<"|     FAHRENHEIT TO CELSIUS CHART       |" << endl;
+	cout<<"-----------------------------------------"<<endl;
+	cout<< "|" << setw(5) << "FAHRENHEIT " << setw(5) << "|"  <<" CELSIUS"<< setw(10) << "|" <<endl;
+	
+	for(int j=0;j<=180;j++)
+	{
+		centi=(fahren - 32) * 5/9;
+		cout<<"|"<<setw(5)<<fahren<<setw(8)<<"|"<<setw(10)<<centi<<setw(10)<<"|"<<endl;
+		cout<<"_________________________________"<<endl;
+		fahren++;
+	}
+	
+	
+}
+
+int main()
+{
+	int choice;
+	cout<<"CELSIUS TO FAHRENHEIT & FAHRENHEIT TO CELSIUS CHART"<<endl;
+	cout<<"Which chart do you want?"<<endl<<"Press 1 for Celsius to Fahrenheit & Press 2 for Fahrenheit to Celsius :";
+	cin>>choice;
+	cout<<endl;
+	switch(choice)
+	{
+	case 1:
+		fahrenheit();
+		break;
+	case 2:
+		celsius();
+		break;
+	default:
+		cout<<"Invalid Input!"<<endl;
+	}
+
+	getch();
+	return 0;
+}
